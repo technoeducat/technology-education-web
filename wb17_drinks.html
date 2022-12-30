@@ -1,0 +1,398 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Drinks</title>
+<meta name="generator" content="WYSIWYG Web Builder 18 - http://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/ويب_الكلية_نهائى.css" rel="stylesheet">
+<link href="css/wb17_drinks.css" rel="stylesheet">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery.ui.effect.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/wwb18.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function(event)
+{
+   var quotesCarousel = new bootstrap.Carousel('#quotesCarousel', {interval: 3000, pause: false});
+   var headerMenu_dropdownToggle = document.querySelectorAll('#headerMenu .dropdown-toggle');
+   headerMenu_dropdownToggle.forEach(item => 
+   {
+      var dropdown = new bootstrap.Dropdown(item, {popperConfig:{placement:item.getAttribute('data-bs-placement')}});
+   });
+   var headerMenu_dropdown = document.querySelectorAll('#headerMenu .dropdown');
+   headerMenu_dropdown.forEach(item => 
+   {
+      item.addEventListener('shown.bs.dropdown', function(e)
+      {
+         e.currentTarget.classList.add('show');
+      });
+      item.addEventListener('hidden.bs.dropdown', function(e)
+      {
+         e.currentTarget.classList.remove('show');
+      });
+   });
+});
+</script>
+<script>
+$(document).ready(function()
+{
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $("a[href*='#header']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#intro']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_intro').offset().top-88 }, 600, 'easeOutExpo');
+   });
+   $("a[href*='#drinks']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#drinks').offset().top }, 600, 'easeOutExpo');
+   });
+   $("a[href*='#quotesLayoutGrid']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_quotesLayoutGrid').offset().top-88 }, 600, 'easeOutExpo');
+   });
+   function onScrollquotesLayoutGrid()
+   {
+      var $obj = $("#wb_quotesLayoutGrid");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollquotesLayoutGrid();
+   $(window).scroll(function(event)
+   {
+      onScrollquotesLayoutGrid();
+   });
+   $("a[href*='#aboutLayoutGrid']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_aboutLayoutGrid').offset().top }, 600, 'easeOutExpo');
+   });
+   $("a[href*='#bottlesLayoutGrid']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_bottlesLayoutGrid').offset().top-88 }, 600, 'easeOutExpo');
+   });
+   function onScrollbottlesLayoutGrid()
+   {
+      var $obj = $("#wb_bottlesLayoutGrid");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollbottlesLayoutGrid();
+   $(window).scroll(function(event)
+   {
+      onScrollbottlesLayoutGrid();
+   });
+   $("a[href*='#prices']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_prices').offset().top }, 600, 'easeOutExpo');
+   });
+   $("a[href*='#contact']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_contact').offset().top }, 600, 'easeOutExpo');
+   });
+   var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+   if (iOS)
+   {
+      $('#wb_intro,#wb_quotesLayoutGrid,#wb_bottlesLayoutGrid,#wb_contact').css('background-attachment', 'scroll');
+   }
+});
+</script>
+</head>
+<body>
+<div id="wb_header">
+<div id="header">
+<div class="row">
+<div class="col-1">
+<div id="wb_headerImage" style="display:inline-block;width:176px;height:52px;z-index:0;">
+<img src="images/كلية 2التكنولوجيا.png" id="headerImage" alt="" width="176" height="53">
+</div>
+</div>
+<div class="col-2">
+<div id="wb_headerMenu" style="display:inline-block;width:100%;z-index:1;">
+<div id="headerMenu" class="headerMenu" style="width:100%;height:auto !important;">
+<div class="container">
+<div class="navbar-header">
+<button title="Hamburger Menu" type="button" class="navbar-toggle" data-bs-toggle="collapse" data-bs-target=".headerMenu-navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="headerMenu-navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="nav-item">
+<a href="#contact" class="nav-link">التواصل</a>
+</li>
+<li class="nav-item">
+<a href="#drinks" class="nav-link">آخر الأخبار</a>
+</li>
+<li class="nav-item">
+<a href="#prices" class="nav-link">تاريخ الإنشاء و الأقسام بالكلية</a>
+</li>
+<li class="nav-item">
+<a href="#aboutLayoutGrid" class="nav-link">الرؤية و الرسالة</a>
+</li>
+<li class="nav-item">
+<a href="#intro" class="nav-link">الرئيسية</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_intro">
+<div id="intro">
+<div class="col-1">
+</div>
+</div>
+</div>
+<div id="wb_drinks">
+<div id="drinks">
+<div id="wb_drinksCard1" style="display:flex;z-index:2;" class="card">
+   <div id="drinksCard1-card-body">
+      <img id="drinksCard1-card-item0" src="images/1 (26).JPG" width="5472" height="3648" alt="" title="">
+      <div id="drinksCard1-card-item1">زيارة وفد من قطاع المعامل و التطوير بشركة المقاولون العرب</div>
+      <hr id="drinksCard1-card-item2">
+      <div id="drinksCard1-card-item3">زيارة وفد من قطاع المعامل و التطوير بشركة المقاولون العرب برئاسة المهندسة / مفيدة علام ـــ المشرف على القطاع إلى كلية التكنولوجيا و التعليم و خاصة معامل قسم الإنشاءات المدنية و المعمارية و ذلك تمهيداً لتوقيع بروتوكول تعاون بين جامعة السويس ممثلة فى كلية التكنولوجيا و التعليم و شركة المقاولون العرب ممثلة في قطاع المختبرات و المعامل حيث حضر اللقاء السيد أ.د/ على عطا - نائب رئيس الجامعة لشئون التعليم و الطلاب و السيد أ.د/  حسام الدين مصطفى عطية - عميد الكلية و السيد د / عمر محمد عمر - وكيل الكلية لشئون التعليم و الطلاب و رئيس قسم الإنشاءات المدنية و المعمارية و أعضاء هيئة التدريس بقسم الإنشاءات المدنية و المعمارية .</div>
+      <div id="drinksCard1-card-item4">Read more >></div>
+   </div>
+</div>
+<div id="wb_drinksCard3" style="display:flex;z-index:3;" class="card">
+   <div id="drinksCard3-card-body">
+      <img id="drinksCard3-card-item0" src="images/1 (82).JPG" width="5472" height="3648" alt="" title="">
+      <div id="drinksCard3-card-item1">ندوة بعنوان "التنمية المستدامة و الطاقة الخضراء لمواجهة التغيرات المناخية"<br></div>
+      <hr id="drinksCard3-card-item2">
+      <div id="drinksCard3-card-item3">ندوة كلية التكنولوجيا والتعليم بعنوان "التنمية المستدامة و الطاقة الخضراء لمواجهة التغيرات المناخية"<br>في إطار أنشطة جامعة السويس المتعلقة بقضايا التغيرات المناخية، و مواكبة لقمة COP 27 بشرم الشيخ، نظمت كلية التكنولوجيا والتعليم بمدرج الكلية بالجامعة ندوة برعاية أ.د. السيد الشرقاوي رئيس جامعة السويس بعنوان "التنمية المستدامة و الطاقة الخضراء لمواجهة التغيرات المناخية" بحضور السادة أ.د. علي حسين عطا نائب رئيس الجامعة لشئون التعليم والطلاب، أ.د. عبد العاطي لاشين نائب رئيس الجامعة لشئون الدراسات العليا والبحوث، ا. د. حسام الدين مصطفى عطية عميد كلية التكنولوجيا و التعليم و السادة وكلاء الكلية و اعضاء هيئة التدريس والهيئةالمعاونةو طلاب الكلية و السادة الضيوف من شركة المقاولون العرب و شركة النهضة التابعة لشركة المقاولون العرب و فرع وزارة شؤون البيئة بالسويس<br>قدم السادة المحاضرون : مهندسة / مفيدة علام المشرفة على قطاع المعامل و التطوير بشركة المقاولون العرب<br>و دكتورة / انعام مجاهد رئيس الفرع الاقليمى لجهاز شؤون البيئة بالسويس و سيناء<br>دكتور / طارق السيد شركة العز للصلب المسطح<br>الاستاذ الدكتور/ جمال بدير عبد العزيز وكيل الكلية لشؤون الدراسات العليا و البحوث<br>محاضرات عن التنمية المستدامة لمخلفات التشييد و الطرق و القوانين البيئية و التخفيف من آثار التغيرات المناخية و أيضا أولويات و معايير التنمية المستدامة للتعافى الأخضر و اخيرا سبل مواجهة التغيرات المناخية من أجل مستقبل افضل .<br>أدار الندوة دكتور/ عبد الكريم يوسف وكيل الكلية لشؤون خدمة المجتمع و تنمية البيئة، دكتور محمد عطية مدير مركز الاستشارات بالكلية.<br></div>
+      <div id="drinksCard3-card-item4">Read more >></div>
+   </div>
+</div>
+<div id="wb_drinksCard2" style="display:flex;z-index:4;" class="card">
+   <div id="drinksCard2-card-body">
+      <img id="drinksCard2-card-item0" src="images/289994890_791111122268480_6047758839294579457_n.jpg" width="1280" height="853" alt="" title="">
+      <div id="drinksCard2-card-item1">جائزة التميز الحكومى الداخلى</div>
+      <hr id="drinksCard2-card-item2">
+      <div id="drinksCard2-card-item3">فوز كلية التكنولوجيا والتعليم بجائزة التميز الحكومي الداخلي بجامعة السويس للعام 2022<br>برعاية وحضور أ.د. السيد الشرقاوي رئيس الجامعة نظمت صباح اليوم بقاعة المؤتمرات الكبرى بالجامعة احتفالية جامعة السويس بجائزة التميز الحكومي بحضور السادة نواب رئيس الجامعة وعمداء الكليات المشاركة في الجائزة، بالإضافة لحضور السادة أ. خالد مصطفى الوكيل الدائم لوزارة التخطيط والمشرف العام على جائزة التميز الحكومي، د. داليا سامي الأمين العام المساعد للمجلس الأعلى للجامعات. وقد شارك في فعاليات المنافسة أحدى عشر كلية من كليات الجامعة وفازت كلية التكنولوجيا والتعليم بالمركز الأول علي مستوي الجامعة وجاء ذلك تتويجا لمجهودات إدارة الكلية بمختلف قطاعاتها تحت قيادة الأستاذ الدكتور حسام الدين مصطفي عطية عميد الكلية وذلك طوال الأعوام الثلاثة الماضية واصرار الجميع على أن تتبوأ الكلية مكانتها الحقيقية بين كليات الجامعة و بين قريناتها من كليات التكنولوجيا والتعليم<br></div>
+      <div id="drinksCard2-card-item4">Read more >></div>
+   </div>
+</div>
+</div>
+</div>
+<div id="wb_quotesLayoutGrid">
+<div id="quotesLayoutGrid-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 125" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.5" d="m 0,81.659348 c 81.99918,0 88.739113,19.697032 141.99858,19.697032 46.67953,0 33.12967,-19.551122 85.12915,-19.551122 57.49943,0 75.87924,34.141512 143.87856,34.141512 55.99944,0 98.99901,-36.475982 149.49851,-36.475982 76.49923,0 77.32923,29.482322 131.49868,43.284832 55.99944,14.2694 72.82927,-44.169982 142.82857,-44.169982 41.37959,0 74.35926,28.033012 103.68897,28.033012 C 942.67057,106.61865 1000,75.093678 1000,75.093678 V 24.999998 H 0 Z" />
+<path class="divider-fill" d="m 0,81.988666 c 97.331947,-14.74806 115.33231,19.667594 176.67353,19.667594 53.33107,0 60.14121,-51.965834 122.64246,-51.965834 84.00168,0 116.35232,90.668944 200.004,73.034484 80.0016,-16.85492 86.00172,-63.205964 153.34306,-63.205964 49.661,0 86.65174,33.00405 124.00248,33.00405 33.33067,0 51.27103,-31.16054 78.00156,-31.16054 43.93088,0 51.28103,31.0868 97.90196,28.83245 C 976.99954,89.015066 1000,74.267006 1000,74.267006 V 5.8499091e-6 H 0 Z" />
+</svg></div>
+<div id="quotesLayoutGrid-divider-bottom">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 125" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.5" d="m 0,81.659348 c 81.99918,0 88.739113,19.697032 141.99858,19.697032 46.67953,0 33.12967,-19.551122 85.12915,-19.551122 57.49943,0 75.87924,34.141512 143.87856,34.141512 55.99944,0 98.99901,-36.475982 149.49851,-36.475982 76.49923,0 77.32923,29.482322 131.49868,43.284832 55.99944,14.2694 72.82927,-44.169982 142.82857,-44.169982 41.37959,0 74.35926,28.033012 103.68897,28.033012 C 942.67057,106.61865 1000,75.093678 1000,75.093678 V 24.999998 H 0 Z" />
+<path class="divider-fill" d="m 0,81.988666 c 97.331947,-14.74806 115.33231,19.667594 176.67353,19.667594 53.33107,0 60.14121,-51.965834 122.64246,-51.965834 84.00168,0 116.35232,90.668944 200.004,73.034484 80.0016,-16.85492 86.00172,-63.205964 153.34306,-63.205964 49.661,0 86.65174,33.00405 124.00248,33.00405 33.33067,0 51.27103,-31.16054 78.00156,-31.16054 43.93088,0 51.28103,31.0868 97.90196,28.83245 C 976.99954,89.015066 1000,74.267006 1000,74.267006 V 5.8499091e-6 H 0 Z" />
+</svg></div>
+<div id="quotesLayoutGrid">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_quotesCarousel" style="">
+<div id="quotesCarousel" class="carousel slide" data-bs-ride="carousel">
+<ol class="carousel-indicators">
+<li data-bs-target="#quotesCarousel" data-bs-slide-to="0" class="active"></li>
+<li data-bs-target="#quotesCarousel" data-bs-slide-to="1"></li>
+<li data-bs-target="#quotesCarousel" data-bs-slide-to="2"></li>
+</ol>
+<div class="carousel-inner">
+<div class="carousel-item active">
+<div class="carousel-item-inner">
+<div id="wb_quotesCard1" style="display:flex;width:100%;z-index:5;" class="card">
+   <div id="quotesCard1-card-body">
+      <div id="quotesCard1-card-item0"><i class="fa fa-quote-right"></i></div>
+      <div id="quotesCard1-card-item1">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam."</div>
+      <div id="quotesCard1-card-item2">Eve O'Lution</div>
+   </div>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="carousel-item-inner">
+<div id="wb_quotesCard2" style="display:flex;width:100%;z-index:6;" class="card">
+   <div id="quotesCard2-card-body">
+      <div id="quotesCard2-card-item0"><i class="fa fa-quote-right"></i></div>
+      <div id="quotesCard2-card-item1">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio."</div>
+      <div id="quotesCard2-card-item2">Ed Venture</div>
+   </div>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="carousel-item-inner">
+<div id="wb_quotesCard3" style="display:flex;width:100%;z-index:7;" class="card">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_aboutLayoutGrid">
+<div id="aboutLayoutGrid">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_aboutHeading" style="display:inline-block;width:100%;z-index:9;">
+<h1 id="aboutHeading">الرؤية   <br></h1>
+</div>
+<div id="wb_aboutText">
+<p style="margin:8px 0 0 48px;font-family:TimesNewRomanPSMT;line-height:24px;"><span style="font-family:Arial;">الريادة والتميز في مجالي التكنولوجيا والتعليم الصناعي محليا ودوليا</span></p>
+<p style="font-size:13px;">&nbsp;</p>
+</div>
+<a id="aboutButton" href="" style="display:inline-block;width:116px;height:34px;z-index:11;">الرسالة</a>
+<div id="wb_Text1">
+<span style="color:#FFFFFF;font-family:Arial;font-size:19px;">تلتزم كلية التكنولوجيا والتعليم بجامعة السويس بإعداد خريج مؤهل طبقا للمعايير الأكاديمية المرجعية في مجالي التكنولوجيا والتعليم الصناعي يلبي احتياجات سوق العمل وقادر على البحث العلمي التطبيقي وخدمة المجتمع وتنمية البيئة في إطار من القيم والأخلاق.</span>
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_aboutImage" style="display:inline-block;width:100%;height:auto;z-index:13;">
+<img src="images/1 (200).jpg" id="aboutImage" alt="" width="455" height="303">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_bottlesLayoutGrid">
+<div id="bottlesLayoutGrid">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_prices">
+<div id="prices">
+<div class="row">
+<div class="col-1">
+</div>
+<div class="col-2">
+<div id="wb_pricesCard2" style="display:flex;width:100%;z-index:14;" class="card">
+   <div id="pricesCard2-card-body">
+      <div id="pricesCard2-card-item0">أقسام الكلية</div>
+      <div id="pricesCard2-card-item1">ويوجد بها أربعة أقسام طلابية رئيسية هي قسم الميكانيكا وقسم الكهرباء وقسم الإنشاءات المدنية والمعمارية وقسم الغزل والنسيج ومدة الدراسة بالكلية هي أربعة سنوات. وتحتوي الكلية على مبنيين أحدهما إداري والآخر تعليمي. كما تشتمل الكلية على ثلاثة معامل لشعبة إنتاج وثلاثة معامل لشعبة تبريد وسبعة معامل لقسم الكهرباء وثلاثة معامل لقسم الإنشاءات المدنية والمعمارية وتوجد ورش مركزية بالجامعة لقسم الغزل والنسيج.</div>
+   </div>
+</div>
+<div id="wb_pricesCard1" style="display:flex;width:100%;z-index:15;" class="card">
+   <div id="pricesCard1-card-body">
+      <div id="pricesCard1-card-item0">أقسام التكنولوجى</div>
+      <div id="pricesCard1-card-item1">تكنولوجيا اللحام-<br>الطاقة المتجددة-<br>الإنشاءات-<br></div>
+   </div>
+</div>
+</div>
+<div class="col-3">
+<div id="wb_pricesCard3" style="display:flex;width:100%;z-index:16;" class="card">
+   <div id="pricesCard3-card-body">
+      <div id="pricesCard3-card-item0">نشأة الكلية</div>
+      <div id="pricesCard3-card-item1">صدر القرار الجمهوري رقم 419 لسنة 1995م لإنشاء كلية التعليم الصناعي التابعة لجامعة قناة السويس حينها وبدأت الدراسة بها في العام الدراسي 1996/1997م، واستمرت تابعة لجامعة قناة السويس حتى صدور القرار الجمهوري رقم 193 لسنة 2012م الخاص بإنشاء جامعة السويس كما تعد الكلية ثالث كليات التعليم الصناعي في مصر من حيث الترتيب الزمني للإنشاء، وبدأت الدراسة بها للارتقاء بمستوى التعليم الفني حتى يتمكن من أداء دوره في تلبية احتياجات النهضة الصناعية من العمالة الفنية الماهرة. ويوجد بها أربعة أقسام طلابية رئيسية هي قسم الميكانيكا وقسم الكهرباء وقسم الإنشاءات المدنية والمعمارية وقسم الغزل والنسيج ومدة الدراسة بالكلية هي أربعة سنوات. وتحتوي الكلية على مبنيين أحدهما إداري والآخر تعليمي. كما تشتمل الكلية على ثلاثة معامل لشعبة إنتاج وثلاثة معامل لشعبة تبريد وسبعة معامل لقسم الكهرباء وثلاثة معامل لقسم الإنشاءات المدنية والمعمارية وتوجد ورش مركزية بالجامعة لقسم الغزل والنسيج.<br>  <br>وقد قرر المجلس الأعلى للجامعات برئاسة الدكتور خالد عبد الغفار وزير التعليم العالي والبحث العلمي بجلسته بتاريخ 25 نوفمبر 2019م على تغيير مسمى كلية التعليم الصناعي بجامعة السويس ليكون كلية التكنولوجيا والتعليم واعتمد مجلس الوزراء هذا المسمى بجلسته رقم (81) بتاريخ 4 مارس 2020م علما بأن المسمى الجديد يسمح أن يحصل الخريج على شهادة بكالوريوس التكنولوجيا في تخصصات الكهرباء والإلكترونيات والتبريد والإنتاج والإنشاءات والعمارة والنسيج أو بكالوريوس التعليم الصناعي في نفس التخصصات. ويكون خريج بكالوريوس التكنولوجيا في مجال الصناعة بدرجة أخصائي تكنولوجيا ثالث في مجال تخصصه، بينما يعمل الخريج الحاصل على بكالوريوس التعليم الصناعي في المدارس الثانوية الصناعية نظام ثلاث وخمس سنوات والكليات التكنولوجية.<br>صدرت أول لائحة للدراسات العلیا في عام 2007م، وتحتوي هذه اللائحة على برامج دبلوم الدراسات العليا ودرجة الماجستير ودرجة الدكتوراة في التعليم الصناعي بالأقسام العلمية المختلفة. وبدأ نظام السنة التمهيدية (نظام الساعات المعتمدة) والتي يُدرس فيها عدد من المقررات الدراسة لطلاب الماجستير في العام الدراسي 2007/2008م. وقد بدأ التسجيل في العام الجامعي 2008/2009م لدرجة الماجستير بأقسام الكلية المختلفة بدون سنة تمهيدية ومقررات دراسية. وبدأت الدراسة التمهيدية لدرجة الدكتوراة بنظام الساعات المعتمدة في العام الجامعي 2012/2013م ثم بدأ التسجيل لدرجة الدكتوراة في العام الجامعي 2013/2014م.<br></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="upStickyLayer" style="position:fixed;text-align:left;left:auto;right:25px;top:auto;bottom:25px;width:50px;height:50px;z-index:40;">
+<div id="wb_upIcon" style="position:absolute;left:9px;top:9px;width:24px;height:24px;text-align:center;z-index:17;">
+<a href="#intro"><div id="upIcon"><i class="fa fa-arrow-up"></i></div></a></div>
+</div>
+<div id="wb_contact">
+<div id="contact-overlay"></div>
+<div id="contact-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 125" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.5" d="m 0,81.659348 c 81.99918,0 88.739113,19.697032 141.99858,19.697032 46.67953,0 33.12967,-19.551122 85.12915,-19.551122 57.49943,0 75.87924,34.141512 143.87856,34.141512 55.99944,0 98.99901,-36.475982 149.49851,-36.475982 76.49923,0 77.32923,29.482322 131.49868,43.284832 55.99944,14.2694 72.82927,-44.169982 142.82857,-44.169982 41.37959,0 74.35926,28.033012 103.68897,28.033012 C 942.67057,106.61865 1000,75.093678 1000,75.093678 V 24.999998 H 0 Z" />
+<path class="divider-fill" d="m 0,81.988666 c 97.331947,-14.74806 115.33231,19.667594 176.67353,19.667594 53.33107,0 60.14121,-51.965834 122.64246,-51.965834 84.00168,0 116.35232,90.668944 200.004,73.034484 80.0016,-16.85492 86.00172,-63.205964 153.34306,-63.205964 49.661,0 86.65174,33.00405 124.00248,33.00405 33.33067,0 51.27103,-31.16054 78.00156,-31.16054 43.93088,0 51.28103,31.0868 97.90196,28.83245 C 976.99954,89.015066 1000,74.267006 1000,74.267006 V 5.8499091e-6 H 0 Z" />
+</svg></div>
+<div id="contact-divider-bottom">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 125" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.5" d="m 0,81.659348 c 81.99918,0 88.739113,19.697032 141.99858,19.697032 46.67953,0 33.12967,-19.551122 85.12915,-19.551122 57.49943,0 75.87924,34.141512 143.87856,34.141512 55.99944,0 98.99901,-36.475982 149.49851,-36.475982 76.49923,0 77.32923,29.482322 131.49868,43.284832 55.99944,14.2694 72.82927,-44.169982 142.82857,-44.169982 41.37959,0 74.35926,28.033012 103.68897,28.033012 C 942.67057,106.61865 1000,75.093678 1000,75.093678 V 24.999998 H 0 Z" />
+<path class="divider-fill" d="m 0,81.988666 c 97.331947,-14.74806 115.33231,19.667594 176.67353,19.667594 53.33107,0 60.14121,-51.965834 122.64246,-51.965834 84.00168,0 116.35232,90.668944 200.004,73.034484 80.0016,-16.85492 86.00172,-63.205964 153.34306,-63.205964 49.661,0 86.65174,33.00405 124.00248,33.00405 33.33067,0 51.27103,-31.16054 78.00156,-31.16054 43.93088,0 51.28103,31.0868 97.90196,28.83245 C 976.99954,89.015066 1000,74.267006 1000,74.267006 V 5.8499091e-6 H 0 Z" />
+</svg></div>
+<div id="contact">
+<div class="row">
+<div class="col-1">
+<div id="wb_contactIcon2" style="display:inline-block;width:30px;height:30px;text-align:center;z-index:18;">
+<a href="https://www.facebook.com/faculty.technology.education"><div id="contactIcon2"><i class="fa fa-facebook"></i></div></a>
+</div>
+<div id="wb_contactIcon3" style="display:inline-block;width:30px;height:30px;text-align:center;z-index:19;">
+<a href="https://t.me/facultytechnologysuze"><div id="contactIcon3"><i class="fa fa-telegram"></i></div></a>
+</div>
+<div id="wb_contactIcon4" style="display:inline-block;width:25px;height:30px;text-align:center;z-index:20;">
+<a href="https://www.youtube.com/channel/UCrKweFeZ8nDHfSa4oY16jSA"><div id="contactIcon4"><i class="fa fa-youtube-play"></i></div></a>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_contactLabel2" style="display:inline-block;width:100%;z-index:21;">
+<h3 id="contactLabel2"></h3>
+</div>
+</div>
+<div class="col-3">
+<label for="drinksCard2" id="contactLabel3" style="display:inline-block;width:275px;line-height:19px;z-index:22;">للتواصل معنا</label>
+<input type="text" id="contactName" style="display:block;width: 100%;height:38px;z-index:23;" name="name" value="" spellcheck="false" placeholder="أمين الكلية">
+<input type="text" id="contactEmail" style="display:block;width: 100%;height:38px;z-index:24;" name="email" value="" spellcheck="false" placeholder="Email: head@ind.suezuni.edu.eg">
+<textarea name="message" id="contactMessage" style="display:block;width: 100%;;height:85px;z-index:25;" rows="2" cols="25" autocomplete="off" spellcheck="false" placeholder="Message"></textarea>
+<input type="submit" id="contactButton" name="" value="Send" style="display:block;width: 100%;;height:34px;z-index:26;">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_footerLayoutGrid">
+<div id="footerLayoutGrid">
+<div class="row">
+<div class="col-1">
+<div id="wb_footerText1">
+<span style="color:#FFFFFF;font-family:Arial;font-size:19px;">Made with</span>
+</div>
+<div id="wb_footerIcon" style="display:inline-block;width:32px;height:32px;text-align:center;z-index:31;">
+<div id="footerIcon"><i class="fa fa-heart-o"></i></div>
+</div>
+<div id="wb_footerText2">
+<span style="color:#FFFFFF;font-family:Arial;font-size:19px;">Ashraf Hassan Mohammed</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
